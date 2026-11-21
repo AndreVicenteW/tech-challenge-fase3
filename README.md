@@ -276,6 +276,31 @@ requirements.txt         Dependências da aplicação e dos testes
 
 Este repositório contempla o código modular da aplicação, os notebooks do pipeline de treinamento, os exemplos de dados sintéticos, a integração LangChain/LangGraph, as políticas de segurança e as evidências de avaliação. O **relatório técnico detalhado**, com análise dos resultados e diagrama, e o **vídeo de demonstração (até 15 minutos)** complementam a entrega conforme o enunciado da FIAP.
 
+## Download do modelo
+
+O modelo personalizado do Hospital Aurora está disponível
+na seção Releases deste repositório.
+
+**Versão:** v1.0.0
+**Arquivo:** [qwen_aurora_q4_k_m.gguf](https://github.com/AndreVicenteW/tech-challenge-fase3/releases/download/v1.0.0/qwen_aurora_q4_k_m.gguf)
+**Quantização:** Q4_K_M
+
+Para executar:
+
+1. Baixe o arquivo GGUF da release.
+2. Coloque-o em `artifacts/gguf/`.
+3. Instale e inicie o Ollama.
+4. Execute:
+
+   ollama create hospital-aurora -f Modelfile
+
+5. Inicie a aplicação:
+
+   python -m streamlit run app/streamlit_app.py
+
+O modelo é experimental e não deve ser utilizado
+para decisões clínicas reais.
+
 ## Referências
 
 - Enunciado — FIAP Tech Challenge, Fase 3 (PDF disponibilizado no ambiente acadêmico).
