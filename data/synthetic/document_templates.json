@@ -1,0 +1,40 @@
+{
+  "MOD-001": {
+    "type": "laudo",
+    "title": "Modelo de Laudo de Exame",
+    "fields": [
+      "patient_id",
+      "exam_name",
+      "exam_date",
+      "findings",
+      "conclusion",
+      "responsible_professional"
+    ],
+    "requires_approval": true
+  },
+  "MOD-002": {
+    "type": "receita",
+    "title": "Modelo de Receita Médica",
+    "fields": [
+      "patient_id",
+      "medication",
+      "dosage",
+      "instructions",
+      "prescriber",
+      "signature"
+    ],
+    "requires_approval": true
+  },
+  "MOD-003": {
+    "type": "procedimento",
+    "title": "Registro de Procedimento",
+    "fields": [
+      "patient_id",
+      "procedure",
+      "date",
+      "description",
+      "responsible_professional"
+    ],
+    "requires_approval": true
+  }
+}

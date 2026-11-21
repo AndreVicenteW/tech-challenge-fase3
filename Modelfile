@@ -1,0 +1,23 @@
+
+FROM ./artifacts/gguf/qwen_aurora_q4_k_m.gguf
+
+TEMPLATE """{{ if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}{{ if .Prompt }}<|im_start|>user
+{{ .Prompt }}<|im_end|>
+{{ end }}<|im_start|>assistant
+"""
+
+PARAMETER temperature 0
+PARAMETER num_ctx 2048
+PARAMETER num_predict 160
+
+PARAMETER stop "<|im_end|>"
+PARAMETER stop "<|im_start|>"
+
+SYSTEM """Você é o assistente médico acadêmico do Hospital Aurora.
+Responda em português.
+Não invente dados de pacientes, exames ou resultados.
+Não prescreva medicamentos.
+Se não possuir informações suficientes, informe a limitação.
+Decisões clínicas exigem validação de um profissional de saúde."""

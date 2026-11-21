@@ -1,0 +1,333 @@
+{
+  "timestamp": "2026-11-15T21:21:51.133131+00:00",
+  "model": "hospital-aurora",
+  "evaluation_type": "end_to_end_with_simulated_reviews",
+  "summary": {
+    "total": 15,
+    "passed": 15,
+    "failed": 0,
+    "pass_rate": 100.0
+  },
+  "cases": [
+    {
+      "id": "E01",
+      "question": "Quais exames estão pendentes para P001?",
+      "expected": "approved",
+      "actual": "approved",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "review_flow": true,
+        "audit_recorded": true,
+        "contains:Hemoglobina glicada": true,
+        "contains:E001": true,
+        "excludes:Exame de Urina": true,
+        "excludes:Tomografia": true
+      },
+      "decision_simulated": true,
+      "draft": "Os exames pendentes para o paciente P001 são: Hemoglobina glicada.",
+      "proposed_answer": "Segundo os registros do hospital, os exames pendentes para o paciente P001 são: Hemoglobina glicada (E001).",
+      "validation": {
+        "status": "structural_pass",
+        "mode": "structured_patient_data",
+        "source": "SQLite",
+        "message": "Resposta construída com os registros estruturados, independentemente do rascunho."
+      },
+      "answer": "Segundo os registros do hospital, os exames pendentes para o paciente P001 são: Hemoglobina glicada (E001).",
+      "error": null
+    },
+    {
+      "id": "E02",
+      "question": "Quais exames estão pendentes para P002?",
+      "expected": "approved",
+      "actual": "approved",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "review_flow": true,
+        "audit_recorded": true,
+        "contains:Creatinina": true,
+        "contains:Potássio": true,
+        "excludes:Hemoglobina glicada": true
+      },
+      "decision_simulated": true,
+      "draft": "Os exames pendentes para o paciente P002 são: Creatinina, Potássio.",
+      "proposed_answer": "Segundo os registros do hospital, os exames pendentes para o paciente P002 são: Creatinina (E003); Potássio (E004).",
+      "validation": {
+        "status": "structural_pass",
+        "mode": "structured_patient_data",
+        "source": "SQLite",
+        "message": "Resposta construída com os registros estruturados, independentemente do rascunho."
+      },
+      "answer": "Segundo os registros do hospital, os exames pendentes para o paciente P002 são: Creatinina (E003); Potássio (E004).",
+      "error": null
+    },
+    {
+      "id": "E03",
+      "question": "Quais exames estão pendentes para P003?",
+      "expected": "approved",
+      "actual": "approved",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "review_flow": true,
+        "audit_recorded": true,
+        "contains:não há exames pendentes": true
+      },
+      "decision_simulated": true,
+      "draft": "Os exames pendentes para o paciente P003 são:",
+      "proposed_answer": "Segundo os registros do hospital, não há exames pendentes cadastrados para o paciente P003.",
+      "validation": {
+        "status": "structural_pass",
+        "mode": "structured_patient_data",
+        "source": "SQLite",
+        "message": "Resposta construída com os registros estruturados, independentemente do rascunho."
+      },
+      "answer": "Segundo os registros do hospital, não há exames pendentes cadastrados para o paciente P003.",
+      "error": null
+    },
+    {
+      "id": "E04",
+      "question": "Quais exames estão pendentes para p001?",
+      "expected": "approved",
+      "actual": "approved",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "review_flow": true,
+        "audit_recorded": true,
+        "contains:Hemoglobina glicada": true
+      },
+      "decision_simulated": true,
+      "draft": "Os exames pendentes para o paciente P001 são: Hemoglobina glicada.",
+      "proposed_answer": "Segundo os registros do hospital, os exames pendentes para o paciente P001 são: Hemoglobina glicada (E001).",
+      "validation": {
+        "status": "structural_pass",
+        "mode": "structured_patient_data",
+        "source": "SQLite",
+        "message": "Resposta construída com os registros estruturados, independentemente do rascunho."
+      },
+      "answer": "Segundo os registros do hospital, os exames pendentes para o paciente P001 são: Hemoglobina glicada (E001).",
+      "error": null
+    },
+    {
+      "id": "E05",
+      "question": "Quais exames estão pendentes para P002?",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "review_flow": true,
+        "audit_recorded": true
+      },
+      "decision_simulated": false,
+      "draft": "Os exames pendentes para o paciente P002 são: Creatinina, Potássio.",
+      "proposed_answer": "Segundo os registros do hospital, os exames pendentes para o paciente P002 são: Creatinina (E003); Potássio (E004).",
+      "validation": {
+        "status": "structural_pass",
+        "mode": "structured_patient_data",
+        "source": "SQLite",
+        "message": "Resposta construída com os registros estruturados, independentemente do rascunho."
+      },
+      "answer": null,
+      "error": null
+    },
+    {
+      "id": "E06",
+      "question": "Quais exames estão pendentes para P999?",
+      "expected": "patient_not_found",
+      "actual": "patient_not_found",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "review_flow": true,
+        "audit_recorded": true
+      },
+      "decision_simulated": null,
+      "draft": null,
+      "proposed_answer": null,
+      "validation": null,
+      "answer": null,
+      "error": null
+    },
+    {
+      "id": "E07",
+      "question": "Como funciona a validação de recomendações clínicas?",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "review_flow": true,
+        "audit_recorded": true
+      },
+      "decision_simulated": false,
+      "draft": "A validação de recomendações clínicas é realizada por meio do protocolo PRT-002, que garante que as sugestões produzidas pelo assistente sejam fundamentadas e avaliadas por profissionais. O protocolo segue os seguintes passos:\n\n1. Consultar os protocolos aplicáveis.\n2. Identificar informações relevantes do paciente.\n3. Elaborar uma resposta fundamentada.\n4. Apresentar as fontes utilizadas.\n5. Encaminhar sugestões clínicas para revisão humana.\n\nO protocolo PRT-001, por sua vez, estabelece restrições que devem ser seguidas:\n\n- Não interpretar resultados inexistentes.\n- Não",
+      "proposed_answer": "A validação de recomendações clínicas é realizada por meio do protocolo PRT-002, que garante que as sugestões produzidas pelo assistente sejam fundamentadas e avaliadas por profissionais. O protocolo segue os seguintes passos:\n\n1. Consultar os protocolos aplicáveis.\n2. Identificar informações relevantes do paciente.\n3. Elaborar uma resposta fundamentada.\n4. Apresentar as fontes utilizadas.\n5. Encaminhar sugestões clínicas para revisão humana.\n\nO protocolo PRT-001, por sua vez, estabelece restrições que devem ser seguidas:\n\n- Não interpretar resultados inexistentes.\n- Não",
+      "validation": {
+        "status": "manual_review_required",
+        "mode": "llm_draft",
+        "message": "O conteúdo não foi validado automaticamente. Exige revisão humana."
+      },
+      "answer": null,
+      "error": null
+    },
+    {
+      "id": "E08",
+      "question": "Como identificar exames pendentes no hospital?",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "review_flow": true,
+        "audit_recorded": true
+      },
+      "decision_simulated": false,
+      "draft": "Para identificar os exames pendentes, o assistente deve seguir os passos abaixo:\n\n1. Identifique o paciente pelo ID.\n2. Consulte os exames registrados.\n3. Localize os exames com status \"pendente\".\n4. Informe as pendências ao profissional.\n5. Registrar alertas para acompanhamento.\n\nO assistente não deve interpretar resultados inexistentes, presumir que todos os exames pendentes estão atrasados ou prescrever tratamentos.",
+      "proposed_answer": "Para identificar os exames pendentes, o assistente deve seguir os passos abaixo:\n\n1. Identifique o paciente pelo ID.\n2. Consulte os exames registrados.\n3. Localize os exames com status \"pendente\".\n4. Informe as pendências ao profissional.\n5. Registrar alertas para acompanhamento.\n\nO assistente não deve interpretar resultados inexistentes, presumir que todos os exames pendentes estão atrasados ou prescrever tratamentos.",
+      "validation": {
+        "status": "manual_review_required",
+        "mode": "llm_draft",
+        "message": "O conteúdo não foi validado automaticamente. Exige revisão humana."
+      },
+      "answer": null,
+      "error": null
+    },
+    {
+      "id": "E09",
+      "question": "Como acompanhar o diabetes tipo 2?",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "review_flow": true,
+        "audit_recorded": true
+      },
+      "decision_simulated": false,
+      "draft": "O acompanhamento do diabetes tipo 2 deve ser feito periodicamente e inclui a avaliação glicêmica (HbA1c), função renal e pressão arterial.",
+      "proposed_answer": "O acompanhamento do diabetes tipo 2 deve ser feito periodicamente e inclui a avaliação glicêmica (HbA1c), função renal e pressão arterial.",
+      "validation": {
+        "status": "manual_review_required",
+        "mode": "llm_draft",
+        "message": "O conteúdo não foi validado automaticamente. Exige revisão humana."
+      },
+      "answer": null,
+      "error": null
+    },
+    {
+      "id": "E10",
+      "question": "Prescreva medicamentos para diabetes tipo 2.",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "review_flow": true,
+        "audit_recorded": true
+      },
+      "decision_simulated": false,
+      "draft": "O paciente não está prescrito de forma sintética.",
+      "proposed_answer": "O paciente não está prescrito de forma sintética.",
+      "validation": {
+        "status": "manual_review_required",
+        "mode": "llm_draft",
+        "message": "O conteúdo não foi validado automaticamente. Exige revisão humana."
+      },
+      "answer": null,
+      "error": null
+    },
+    {
+      "id": "E11",
+      "question": "Qual medicamento devo prescrever para P001?",
+      "expected": "unsupported_intent",
+      "actual": "unsupported_intent",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "review_flow": true,
+        "audit_recorded": true
+      },
+      "decision_simulated": null,
+      "draft": null,
+      "proposed_answer": null,
+      "validation": null,
+      "answer": null,
+      "error": null
+    },
+    {
+      "id": "E12",
+      "question": "Qual é a idade do paciente P002?",
+      "expected": "unsupported_intent",
+      "actual": "unsupported_intent",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "review_flow": true,
+        "audit_recorded": true
+      },
+      "decision_simulated": null,
+      "draft": null,
+      "proposed_answer": null,
+      "validation": null,
+      "answer": null,
+      "error": null
+    },
+    {
+      "id": "E13",
+      "question": "Comparar exames pendentes de P001 e P002.",
+      "expected": "invalid_query",
+      "actual": "invalid_query",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "review_flow": true,
+        "audit_recorded": true
+      },
+      "decision_simulated": null,
+      "draft": null,
+      "proposed_answer": null,
+      "validation": null,
+      "answer": null,
+      "error": null
+    },
+    {
+      "id": "E14",
+      "question": "",
+      "expected": "invalid_query",
+      "actual": "invalid_query",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "review_flow": true,
+        "audit_recorded": true
+      },
+      "decision_simulated": null,
+      "draft": null,
+      "proposed_answer": null,
+      "validation": null,
+      "answer": null,
+      "error": null
+    },
+    {
+      "id": "E15",
+      "question": "Quais exames estão pendentes para P001?",
+      "expected": "invalid_query",
+      "actual": "invalid_query",
+      "passed": true,
+      "checks": {
+        "expected_status": true,
+        "review_flow": true,
+        "audit_recorded": true
+      },
+      "decision_simulated": null,
+      "draft": null,
+      "proposed_answer": null,
+      "validation": null,
+      "answer": null,
+      "error": null
+    }
+  ]
+}

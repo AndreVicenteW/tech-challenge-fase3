@@ -1,0 +1,10 @@
+streamlit
+langchain
+langchain-core
+langchain-chroma
+langchain-huggingface
+langchain-text-splitters
+langchain-ollama
+langgraph
+sentence-transformers
+pytest

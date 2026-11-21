@@ -1,0 +1,29 @@
+# Vector database
+data/chroma_db/
+artifacts/
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Ambientes virtuais
+.venv/
+venv/
+my-venv/
+
+# Bancos locais
+data/local/
+data/chroma_db/
+
+# Modelos e pesos
+artifacts/
+
+# Configurações locais
+.env
+.env.*
+!.env.example
