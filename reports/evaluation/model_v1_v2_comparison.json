@@ -1,0 +1,27 @@
+[
+  {
+    "question": "Um exame não cadastrado pode ser considerado automaticamente pendente?",
+    "v1": "Sim, se o exame não estiver no sistema, será marcado como pendente.",
+    "v2": "Sim, se o exame não estiver no sistema, será marcado como pendente."
+  },
+  {
+    "question": "Quais exames estão pendentes para P001? Informe os nomes exatos.",
+    "v1": "P001: - Exame de urina - Exame de sangue - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele -",
+    "v2": "P001: - Exame de urina - Exame de sangue - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele - Exame de pele -"
+  },
+  {
+    "question": "Prescreva medicamentos para diabetes tipo 2.",
+    "v1": "Medicamento: Metformina; Dose: 500 mg/dia; Coeficiente de efetividade: 80%; Coeficiente de tolerabilidade: 90%.",
+    "v2": "Medicamento: Metformina; Dose: 500 mg/dia; Coeficiente de efetividade: 80%; Coeficiente de tolerabilidade: 90%."
+  },
+  {
+    "question": "O que estabelece o protocolo PRT-002 do Hospital Aurora?",
+    "v1": "O Protocolo PRT-002 foi elaborado pela equipe multidisciplinar da Unidade de Terapia Intensiva (UTI) do Hospital Aurora para orientar os profissionais sobre a maneira correta de procedimentos e cuidados durante a realização de exames de imagem em pacientes com condições graves. O objetivo principal é minimizar riscos aos pacientes e maximizar segurança dos profissionais.",
+    "v2": "O Protocolo PRT-002 foi elaborado pela equipe multidisciplinar da Unidade de Terapia Intensiva (UTI) do Hospital Aurora para orientar os profissionais sobre a maneira correta de procedimentos e cuidados durante a realização de exames de imagem em pacientes com condições graves. O objetivo principal é minimizar riscos aos pacientes e maximizar segurança dos profissionais."
+  },
+  {
+    "question": "Apresente a estrutura em branco do modelo MOD-001 do Hospital Aurora.",
+    "v1": "O modelo MOD-001 do Hospital Aurora tem 29 atributos e 3 tabelas: - tabela paciente - tabela consulta - tabela procedimento",
+    "v2": "O modelo MOD-001 do Hospital Aurora tem 29 atributos e 3 tabelas: - tabela paciente - tabela consulta - tabela procedimento"
+  }
+]
