@@ -3,8 +3,8 @@
 **Relatório técnico | FIAP — Pós-graduação em Inteligência Artificial para Desenvolvedores | Tech Challenge — Fase 3**  
 **Data:** 21 de novembro de 2026  
 **Versão:** 1.0 — preparação de entrega  
-**Integrante(s):** preencher antes da submissão  
-**Repositório GitHub:** inserir o endereço público antes da submissão
+**Integrante(s):** André Vicente de Souza
+**Repositório GitHub:** https://github.com/AndreVicenteW/tech-challenge-fase3
 
 > **Aviso de escopo:** protótipo acadêmico construído com pacientes e documentos institucionais sintéticos. Não é um dispositivo médico, não possui validação clínica e não deve ser utilizado para diagnosticar, prescrever ou decidir condutas para pacientes reais.
 
@@ -149,7 +149,7 @@ As diferenças são pequenas e não permitem concluir superioridade da V2. As m�
 
 Após o experimento V1, o adaptador foi combinado com o Qwen base (`merge_and_unload`) em FP16 no Colab. O modelo consolidado gerou dois arquivos de pesos totalizando aproximadamente **2,94 GB**. Em seguida, foi convertido para GGUF e quantizado em **Q4_K_M**, produzindo `qwen_aurora_q4_k_m.gguf` com **940,37 MB**. O arquivo é utilizado pelo Ollama no MacBook Air Apple M1, 8 GB de memória unificada. O carregamento FP16 direto via PyTorch MPS falhou por insuficiência de memória, justificando a opção por um runtime mais econômico.
 
-O GGUF não é versionado no Git. Para reprodução integral, ele deve ser disponibilizado separadamente ao avaliador ou reconstruído a partir dos notebooks e do adaptador correspondente. **A publicação do modelo é uma pendência operacional até que exista um link público confirmado.**
+Link do gguf: https://github.com/AndreVicenteW/tech-challenge-fase3/releases/download/v1.0.0/qwen_aurora_q4_k_m.gguf
 
 ## 5. Segurança, revisão e rastreabilidade
 
@@ -250,8 +250,7 @@ Para reexecutar a avaliação final, utilizar `python -m scripts.evaluate_assist
 4. **Revisão humana simplificada:** a interface não autentica o papel de médico ou revisor. `InMemorySaver` não garante continuidade de aprovações pendentes após reinício do processo.
 5. **Governança de dados:** não foram implementados autenticação, autorização por perfil, política de retenção de dados, criptografia ou controles de conformidade necessários em hospital real.
 6. **Qualidade do modelo:** cinco testes adversariais mostraram falhas importantes nas versões V1 e V2. A melhoria do sistema provém principalmente do contexto e das validações externas, não de uma LLM autossuficiente.
-7. **Escalabilidade e distribuição:** os dados e a auditoria são locais; GGUF e índices não estão no Git. A distribuição pública do GGUF precisa ser confirmada para facilitar a reprodução pelo avaliador.
-8. **Avaliação limitada:** 15 cenários end-to-end e cinco prompts adversariais não constituem validação clínica independente ou avaliação estatística robusta.
+7. **Avaliação limitada:** 15 cenários end-to-end e cinco prompts adversariais não constituem validação clínica independente ou avaliação estatística robusta.
 
 Como evoluções futuras, seriam necessários um conjunto maior de avaliações revisadas por profissionais, autorização por perfil, checkpointer persistente, checagem de citações por afirmação, políticas clínicas formais e monitoramento contínuo de erros.
 
@@ -273,7 +272,3 @@ A contribuição central do protótipo não é demonstrar uma LLM clinicamente c
 6. **Ollama.** Documentação. <https://docs.ollama.com/>.
 7. **Streamlit.** Documentação. <https://docs.streamlit.io/>.
 8. **Hospital Aurora.** Protocolos sintéticos PRT-001, PRT-002 e PRT-003; dados e modelos sintéticos versionados no repositório do projeto.
-
----
-
-**Observação para submissão:** preencher o(s) integrante(s) e o link público do repositório. Confirmar que notebook V2, dataset institucional, relatórios e artefatos mencionados foram incluídos no Git. Se o GGUF não for publicado em uma release, registrar no README o procedimento alternativo verificável para obtenção/reprodução.
